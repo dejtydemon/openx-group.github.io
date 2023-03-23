@@ -1,0 +1,650 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="http://bnh.vn/xmlrpc.php">
+    <title>GIẢI PHÁP QUẢN LÝ ĐỊNH DANH ORACLE IDENTITY MANAGEMENT &#8211; BNH</title>
+<link rel='dns-prefetch' href='//s.w.org'>
+<link rel="alternate" type="application/rss+xml" title="Dòng thông tin BNH &raquo;" href="../../feed/index.htm">
+<link rel="alternate" type="application/rss+xml" title="Dòng phản hồi BNH &raquo;" href="../../comments/feed/index.htm">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/bnh.vn\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.12"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min.css?ver=5.4.12' type='text/css' media='all'>
+<link rel='stylesheet' id='contact-form-7-css' href='../../wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.2' type='text/css' media='all'>
+<link rel='stylesheet' id='stm-stm-css' href='../../wp-content/uploads/stm_fonts/stm/stm.css?ver=1.0' type='text/css' media='all'>
+<link rel='stylesheet' id='rs-plugin-settings-css' href='../../wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.2.6' type='text/css' media='all'>
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='wpfront-scroll-top-css' href='../../wp-content/plugins/wpfront-scroll-top/css/wpfront-scroll-top.min.css?ver=2.0.7.08086' type='text/css' media='all'>
+<link rel='stylesheet' id='cmoz-style-css' href='../../wp-content/plugins/contact-me-on-zalo/assets/css/style-2.css?ver=1.0.4' type='text/css' media='all'>
+<link rel='stylesheet' id='hpr-style-css' href='../../wp-content/plugins/hotline-phone-ring/assets/css/style-1.css?ver=2.0.6' type='text/css' media='all'>
+<link rel='stylesheet' id='bootstrap-css' href='../../wp-content/themes/consulting/assets/css/bootstrap.min.css?ver=4.0.2' type='text/css' media='all'>
+<link rel='stylesheet' id='consulting-style-css' href='../../wp-content/themes/consulting/style.css?ver=4.0.2' type='text/css' media='all'>
+<link rel='stylesheet' id='consulting-layout-css' href='../../wp-content/themes/consulting/assets/css/layout_zurich/main.css?ver=4.0.2' type='text/css' media='all'>
+<style id='consulting-layout-inline-css' type='text/css'>
+.page_title{ color: #ffffff !important; background-color: #1e73be !important; background-image: url(../../wp-content/uploads/2020/08/header-banner-01.png) !important; background-repeat: no-repeat !important; }body .page_title h1:after{
+				background: #ffffff;
+			}.mtc, .mtc_h:hover{
+					color: #002e5b!important
+				}.stc, .stc_h:hover{
+					color: #ff636a!important
+				}.ttc, .ttc_h:hover{
+					color: #ff635a!important
+				}.mbc, .mbc_h:hover, .stm-search .stm_widget_search button{
+					background-color: #002e5b!important
+				}.sbc, .sbc_h:hover{
+					background-color: #ff636a!important
+				}.tbc, .tbc_h:hover{
+					background-color: #ff635a!important
+				}.mbdc, .mbdc_h:hover{
+					border-color: #002e5b!important
+				}.sbdc, .sbdc_h:hover{
+					border-color: #ff636a!important
+				}.tbdc, .tbdc_h:hover{
+					border-color: #ff635a!important
+				}
+</style>
+<link rel='stylesheet' id='child-style-css' href='../../wp-content/themes/consulting-child/style.css?ver=4.0.2' type='text/css' media='all'>
+<link rel='stylesheet' id='vc_font_awesome_5_shims-css' href='../../wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/v4-shims.min.css?ver=6.2.0' type='text/css' media='all'>
+<style id='vc_font_awesome_5_shims-inline-css' type='text/css'>
+body #wrapper .fa.fa-facebook{font-family:'Font Awesome 5 Brands' !important;}
+</style>
+<link rel='stylesheet' id='vc_font_awesome_5-css' href='../../wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/all.min.css?ver=6.2.0' type='text/css' media='all'>
+<style id='vc_font_awesome_5-inline-css' type='text/css'>
+body #wrapper .fa.fa-map-marker{font-family:'FontAwesome' !important;} body .fa.fa-map-marker:before{content:"\f041"}
+</style>
+<link rel='stylesheet' id='font-awesome-css' href='../../wp-content/themes/consulting/assets/css/font-awesome.min.css?ver=4.0.2' type='text/css' media='all'>
+<link rel='stylesheet' id='select2-css' href='../../wp-content/themes/consulting/assets/css/select2.min.css?ver=4.0.2' type='text/css' media='all'>
+<link rel='stylesheet' id='header_builder-css' href='../../wp-content/themes/consulting/assets/css/header_builder.css?ver=4.0.2' type='text/css' media='all'>
+<link rel='stylesheet' id='consulting-global-styles-css' href='../../wp-content/themes/consulting/assets/css/global_styles/main.css?ver=4.0.2' type='text/css' media='all'>
+<style id='consulting-global-styles-inline-css' type='text/css'>
+
+    
+        .elementor-widget-video .eicon-play {
+            border-color: #ff635a;
+            background-color: #ff635a;
+        }
+
+        .elementor-widget-wp-widget-nav_menu ul li,
+        .elementor-widget-wp-widget-nav_menu ul li a {
+            color: #002e5b;
+        }
+
+        .elementor-widget-wp-widget-nav_menu ul li.current-cat:hover>a,
+        .elementor-widget-wp-widget-nav_menu ul li.current-cat>a,
+        .elementor-widget-wp-widget-nav_menu ul li.current-menu-item:hover>a,
+        .elementor-widget-wp-widget-nav_menu ul li.current-menu-item>a,
+        .elementor-widget-wp-widget-nav_menu ul li.current_page_item:hover>a,
+        .elementor-widget-wp-widget-nav_menu ul li.current_page_item>a,
+        .elementor-widget-wp-widget-nav_menu ul li:hover>a {
+            border-left-color: #ff636a;
+        }
+
+        div.elementor-widget-button a.elementor-button,
+        div.elementor-widget-button .elementor-button {
+            background-color: #002e5b;
+        }
+
+        div.elementor-widget-button a.elementor-button:hover,
+        div.elementor-widget-button .elementor-button:hover {
+            background-color: #ff635a;
+            color: #002e5b;
+        }
+
+        .elementor-default .elementor-text-editor ul:not(.elementor-editor-element-settings) li:before,
+        .elementor-default .elementor-widget-text-editor ul:not(.elementor-editor-element-settings) li:before {
+            color: #ff636a;
+        }
+
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-mobile-title,
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title {
+            background-color: #ff635a;
+        }
+
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-mobile-title,
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title a {
+            color: #002e5b;
+        }
+
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-mobile-title.elementor-active,
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title.elementor-active {
+            background-color: #002e5b;
+        }
+
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-content-wrapper .elementor-tab-mobile-title.elementor-active,
+        .consulting_elementor_wrapper .elementor-tabs .elementor-tabs-wrapper .elementor-tab-title.elementor-active a {
+            color: #ff635a;
+        }
+
+        .radial-progress .circle .mask .fill {
+            background-color: #ff635a;
+        }
+
+    
+
+    
+</style>
+<link rel='stylesheet' id='stm_megamenu-css' href='../../wp-content/themes/consulting/inc/megamenu/assets/css/megamenu.css?ver=5.4.12' type='text/css' media='all'>
+<link rel='stylesheet' id='js_composer_front-css' href='../../wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.2.0' type='text/css' media='all'>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.0.2'></script>
+<script type='text/javascript' src='../../wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.2.6'></script>
+<script type='text/javascript' src='../../wp-content/themes/consulting/inc/megamenu/assets/js/megamenu.js?ver=5.4.12'></script>
+<link rel='https://api.w.org/' href='../../wp-json/index.htm'>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../../wp-includes/wlwmanifest.xml"> 
+<link rel='prev' title='DỊCH VỤ ĐÁNH GIA VÀ KIỆN TOÀN BẢO MẬT DATABASE' href='../dich-vu-danh-gia-va-kien-toan-bao-mat-database/index.htm'>
+<link rel='next' title='DỊCH VỤ GIA CÔNG PHẦN MỀM' href='../gia-cong-phan-mem/index.htm'>
+<meta name="generator" content="WordPress 5.4.12">
+<link rel="canonical" href="index.htm">
+<link rel='shortlink' href='index.htm?p=7077'>
+<link rel="alternate" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed-20?url=http%3A%2F%2Fbnh.vn%2Fservices%2Fgiai-phap-quan-ly-dinh-danh-oracle-identity-management%2F">
+<link rel="alternate" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embed-21?url=http%3A%2F%2Fbnh.vn%2Fservices%2Fgiai-phap-quan-ly-dinh-danh-oracle-identity-management%2F&#038;format=xml">
+			<style>
+				.hotline-phone-ring-circle {
+					border-color: #ed4c34;
+				}
+				.hotline-phone-ring-circle-fill, .hotline-phone-ring-img-circle, .hotline-bar {
+					background-color: #ed4c34;
+				}
+			</style>
+
+							<style>
+					.hotline-bar {
+						background: rgb( 237, 76, 52, .7 );
+					}
+				</style>
+								<style>
+					.hotline-phone-ring-wrap {
+						 left: 20px;						 bottom: 20px;					}
+				</style>
+				        <script type="text/javascript">
+            var ajaxurl = 'http://bnh.vn/wp-admin/admin-ajax.php';
+            var stm_ajax_load_events = '5724ba1958';
+            var stm_ajax_load_portfolio = 'd5ac7c9598';
+            var stm_ajax_add_event_member_sc = 'e23bcf60dd';
+            var stm_custom_register = '1078fa3e3d';
+            var stm_get_prices = '0121468ec7';
+            var stm_get_history = '865e810b53';
+            var consulting_install_plugin = '081b72d6f2';
+            var stm_ajax_add_review = '3575dff3f8';
+        </script>
+        <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<meta name="generator" content="Powered by Slider Revolution 6.2.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<link rel="icon" href="../../wp-content/uploads/2019/09/cropped-logo-01-1-32x32.png" sizes="32x32">
+<link rel="icon" href="../../wp-content/uploads/2019/09/cropped-logo-01-1-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../wp-content/uploads/2019/09/cropped-logo-01-1-180x180.png">
+<meta name="msapplication-TileImage" content="http://bnh.vn/wp-content/uploads/2019/09/cropped-logo-01-1-270x270.png">
+<script type="text/javascript">function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {				 
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;	
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;	
+				try {								
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);		
+					if(e.layout==="fullscreen" || e.l==="fullscreen") 						
+						newh = Math.max(e.mh,window.RSIH);					
+					else{					
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];					
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,						
+							sl;					
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;					
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];									
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}															
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);					
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}				
+					if(window.rs_init_css===undefined) window.rs_init_css = document.head.appendChild(document.createElement("style"));					
+					document.getElementById(e.c).height = newh+"px";
+					window.rs_init_css.innerHTML += "#"+e.c+"_wrapper { height: "+newh+"px }";				
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}					   
+			//});
+		  };</script>
+<style type="text/css" title="dynamic-css" class="options-output">.top_nav_wr .top_nav .logo a img{width:170px;}#footer .widgets_row .footer_logo a img{width:150px;}</style>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+<body class="stm_service-template-default single single-stm_service postid-7077 site_layout_zurich  header_style_6 sticky_menu title_box_image_added wpb-js-composer js-comp-ver-6.2.0 vc_responsive">
+<div id="wrapper">
+    <div id="fullpage" class="content_wrapper">
+                        <header id="header">
+                                                                        <div class="top_bar">
+                            <div class="container">
+                                                                                                                                                                                            <div class="header_socials">
+                                                                                                    <a target="_blank" href="https://www.facebook.com/BNHVietnam/">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                                                                    <a target="_blank" href="skype:ntlinh84?chat">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                                                            </div>
+                                                                                                                                                    <ul class="top_bar_contacts">
+                                                                                                                            <li>
+                                                <i class="stm-phone_13_2"></i>
+                                                <div class="top_bar_contacts_text">
+                                                    Liên hệ: <strong>0903109886</strong>                                                </div>
+                                            </li>
+                                                                                                                            <li>
+                                                <i class="stm-email"></i>
+                                                <div class="top_bar_contacts_text"><a href="mailto:support@bnh.vn">
+                                                        support@bnh.vn</a>
+                                                </div>
+                                            </li>
+                                                                                                                    </ul>
+                                    
+                                                                                                </div>
+                        </div>
+                                                                        
+                        <div class="header_top clearfix">
+                            <div class="container">
+                                <div class="header_top_wrapper">
+                                                                            <div class="logo media-left media-middle">
+                                                                                                                                                <a href="../../index.htm"><img src="../../wp-content/uploads/2019/09/logo-01-1.png" style="width: 170px; height: px;" alt="BNH"></a>
+                                                                                                                                    </div>
+                                                                        <div class="top_nav media-body media-middle">
+                                                                                <div class="top_nav_wrapper clearfix">
+                                            <ul id="menu-menu-chinh" class="main_menu_nav"><li id="menu-item-7084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7084"><a href="../../index.htm">TRANG CHỦ</a></li>
+<li id="menu-item-7388" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7388"><a href="#">GIỚI THIỆU</a>
+<ul class="sub-menu">
+	<li id="menu-item-7088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7088 stm_col_width_default stm_mega_cols_inside_default"><a href="../../gioi-thieu-chung/index.htm">GIỚI THIỆU CHUNG</a></li>
+	<li id="menu-item-7089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7089 stm_col_width_default stm_mega_cols_inside_default"><a href="../../khach-hang/index.htm">KHÁCH HÀNG</a></li>
+	<li id="menu-item-7447" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7447 stm_col_width_default stm_mega_cols_inside_default"><a href="../../chung-chi-2/index.htm">CHỨNG CHỈ</a></li>
+	<li id="menu-item-7086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7086 stm_col_width_default stm_mega_cols_inside_default"><a href="../../cau-chuyen-thanh-cong/index.htm">CÂU CHUYỆN THÀNH CÔNG</a></li>
+</ul>
+</li>
+<li id="menu-item-7090" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-7090 stm_megamenu stm_megamenu__boxed stm_megamenu_6"><a href="#">GIẢI PHÁP DỊCH VỤ</a>
+<ul class="sub-menu">
+	<li id="menu-item-7097" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7097 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-ho-tro-nang-cao-oracle-acs/index.htm"><i class="stm_megaicon stm-metals"></i>DỊCH VỤ HỖ TRỢ NÂNG CAO ORACLE ACS</a></li>
+	<li id="menu-item-7095" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7095 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-nang-cap-va-trien-khai-giai-phap-ha/index.htm"><i class="stm_megaicon fa fa-server"></i>DỊCH VỤ NÂNG CẤP VÀ TRIỂN KHAI GIẢI PHÁP HA(HIGH AVAILABLE)</a></li>
+	<li id="menu-item-7096" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7096 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-oracle-premier-support/index.htm"><i class="stm_megaicon fa fa-database"></i>DỊCH VỤ ORACLE PREMIER SUPPORT</a></li>
+	<li id="menu-item-7094" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7094 stm_col_width_default stm_mega_cols_inside_default"><a href="../cung-cap-license-subcription-support/index.htm"><i class="stm_megaicon stm-certificate"></i>CUNG CẤP LICENSE &#038; SUBCRIPTION SUPPORT</a></li>
+	<li id="menu-item-7093" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7093 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-danh-gia-va-kien-toan-bao-mat-database/index.htm"><i class="stm_megaicon stm-security"></i>DỊCH VỤ ĐÁNH GIA VÀ KIỆN TOÀN BẢO MẬT DATABASE</a></li>
+	<li id="menu-item-7092" class="menu-item menu-item-type-post_type menu-item-object-stm_service current-menu-item menu-item-7092 stm_col_width_default stm_mega_cols_inside_default"><a href="index.htm" aria-current="page"><i class="stm_megaicon stm-polygon"></i>GIẢI PHÁP QUẢN LÝ ĐỊNH DANH ORACLE IDENTITY MANAGEMENT</a></li>
+	<li id="menu-item-7091" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7091 stm_col_width_default stm_mega_cols_inside_default"><a href="../gia-cong-phan-mem/index.htm"><i class="stm_megaicon fa fa-laptop"></i>DỊCH VỤ GIA CÔNG PHẦN MỀM</a></li>
+	<li id="menu-item-7284" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7284 stm_col_width_default stm_mega_cols_inside_default"><a href="../giai-phap-devops/index.htm"><i class="stm_megaicon stm-chip_13"></i>GIẢI PHÁP DEVOPS</a></li>
+	<li id="menu-item-7595" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7595 stm_col_width_default stm_mega_cols_inside_default"><a href="../tu-van-giai-phap-va-phat-trien-phan-mem/index.htm"><i class="stm_megaicon stm-phone_13"></i>TƯ VẤN GIẢI PHÁP &#038; PHÁT TRIỂN PHẦN MỀM</a></li>
+	<li id="menu-item-7597" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7597 stm_col_width_default stm_mega_cols_inside_default"><a href="../tu-van-va-trien-khai-he-thong-cong-nghe-thong-tin-tong-the/index.htm"><i class="stm_megaicon stm-mumbai_people"></i>TƯ VẤN VÀ TRIỂN KHAI HỆ THỐNG CÔNG NGHỆ THÔNG TIN TỔNG THỂ</a></li>
+</ul>
+</li>
+<li id="menu-item-7100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7100"><a href="../../blog/index.htm">TIN TỨC</a></li>
+<li id="menu-item-7098" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7098"><a href="../../lien-he/index.htm">LIÊN HỆ</a></li>
+<li id="menu-item-7099" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7099"><a href="../../tuyen-dung/index.htm">TUYỂN DỤNG</a></li>
+<li id="menu-item-7576" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7576"><a href="../../en/index.htm"><img src="../../wp-content/uploads/2019/09/en.png" class="img-flag"></a></li>
+</ul>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                        <div class="mobile_header">
+                        <div class="logo_wrapper clearfix">
+                            <div class="logo">
+                                                                    <a href="../../index.htm"><img src="../../wp-content/uploads/2019/09/logo-01-1.png" style="width: 170px; height: px;" alt="BNH"></a>
+                                                            </div>
+                            <div id="menu_toggle">
+                                <button></button>
+                            </div>
+                        </div>
+                        <div class="header_info">
+                            <div class="top_nav_mobile">
+                                <ul id="menu-menu-chinh-1" class="main_menu_nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-7084"><a href="../../index.htm">TRANG CHỦ</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7388"><a href="#">GIỚI THIỆU</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7088 stm_col_width_default stm_mega_cols_inside_default"><a href="../../gioi-thieu-chung/index.htm">GIỚI THIỆU CHUNG</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7089 stm_col_width_default stm_mega_cols_inside_default"><a href="../../khach-hang/index.htm">KHÁCH HÀNG</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7447 stm_col_width_default stm_mega_cols_inside_default"><a href="../../chung-chi-2/index.htm">CHỨNG CHỈ</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7086 stm_col_width_default stm_mega_cols_inside_default"><a href="../../cau-chuyen-thanh-cong/index.htm">CÂU CHUYỆN THÀNH CÔNG</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-7090 stm_megamenu stm_megamenu__boxed stm_megamenu_6"><a href="#">GIẢI PHÁP DỊCH VỤ</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7097 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-ho-tro-nang-cao-oracle-acs/index.htm"><i class="stm_megaicon stm-metals"></i>DỊCH VỤ HỖ TRỢ NÂNG CAO ORACLE ACS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7095 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-nang-cap-va-trien-khai-giai-phap-ha/index.htm"><i class="stm_megaicon fa fa-server"></i>DỊCH VỤ NÂNG CẤP VÀ TRIỂN KHAI GIẢI PHÁP HA(HIGH AVAILABLE)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7096 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-oracle-premier-support/index.htm"><i class="stm_megaicon fa fa-database"></i>DỊCH VỤ ORACLE PREMIER SUPPORT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7094 stm_col_width_default stm_mega_cols_inside_default"><a href="../cung-cap-license-subcription-support/index.htm"><i class="stm_megaicon stm-certificate"></i>CUNG CẤP LICENSE &#038; SUBCRIPTION SUPPORT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7093 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-danh-gia-va-kien-toan-bao-mat-database/index.htm"><i class="stm_megaicon stm-security"></i>DỊCH VỤ ĐÁNH GIA VÀ KIỆN TOÀN BẢO MẬT DATABASE</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service current-menu-item menu-item-7092 stm_col_width_default stm_mega_cols_inside_default"><a href="index.htm" aria-current="page"><i class="stm_megaicon stm-polygon"></i>GIẢI PHÁP QUẢN LÝ ĐỊNH DANH ORACLE IDENTITY MANAGEMENT</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7091 stm_col_width_default stm_mega_cols_inside_default"><a href="../gia-cong-phan-mem/index.htm"><i class="stm_megaicon fa fa-laptop"></i>DỊCH VỤ GIA CÔNG PHẦN MỀM</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7284 stm_col_width_default stm_mega_cols_inside_default"><a href="../giai-phap-devops/index.htm"><i class="stm_megaicon stm-chip_13"></i>GIẢI PHÁP DEVOPS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7595 stm_col_width_default stm_mega_cols_inside_default"><a href="../tu-van-giai-phap-va-phat-trien-phan-mem/index.htm"><i class="stm_megaicon stm-phone_13"></i>TƯ VẤN GIẢI PHÁP &#038; PHÁT TRIỂN PHẦN MỀM</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7597 stm_col_width_default stm_mega_cols_inside_default"><a href="../tu-van-va-trien-khai-he-thong-cong-nghe-thong-tin-tong-the/index.htm"><i class="stm_megaicon stm-mumbai_people"></i>TƯ VẤN VÀ TRIỂN KHAI HỆ THỐNG CÔNG NGHỆ THÔNG TIN TỔNG THỂ</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7100"><a href="../../blog/index.htm">TIN TỨC</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7098"><a href="../../lien-he/index.htm">LIÊN HỆ</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7099"><a href="../../tuyen-dung/index.htm">TUYỂN DỤNG</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7576"><a href="../../en/index.htm"><img src="../../wp-content/uploads/2019/09/en.png" class="img-flag"></a></li>
+</ul>                            </div>
+                                                            <div class="icon_texts">
+                                                                            <div class="icon_text clearfix">
+                                            <div class="icon"><i class="fa fa fa-phone"></i>
+                                            </div>
+                                            <div class="text">
+                                                <strong>0989 890 326</strong>
+                                            </div>
+                                        </div>
+                                                                                                                                            </div>
+                                                                                        <div class="header_socials">
+                                                                            <a target="_blank" href="https://www.facebook.com/BNHVietnam/"><i class="fa fa-facebook"></i></a>
+                                                                            <a target="_blank" href="skype:ntlinh84?chat"><i class="fa fa-skype"></i></a>
+                                                                    </div>
+                                                    </div>
+                    </div>
+                                    </header>
+        <div id="main">
+            	<div class="page_title">
+					<div class="container">
+				            <div class="breadcrumbs">
+                <!-- Breadcrumb NavXT 7.1.0 -->
+<span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" title="Go to BNH." href="../../index.htm" class="home">TRANG CHỦ</a></span><span><i class="fa fa-angle-right"></i></span><span property="itemListElement" typeof="ListItem"><span property="name">GIẢI PHÁP QUẢN LÝ ĐỊNH DANH ORACLE IDENTITY MANAGEMENT</span><meta property="position" content="2"></span>            </div>
+        															<h1 class="h2">GIẢI PHÁP QUẢN LÝ ĐỊNH DANH ORACLE IDENTITY MANAGEMENT</h1>
+												</div>
+			</div>
+            <div class="container">
+
+<div class="content-area">
+
+	<article id="post-7077" class="post-7077 stm_service type-stm_service status-publish hentry">
+    <div class="entry-content consulting_elementor_wrapper">
+                                                    <div class="row"><div class="col-lg-9 col-md-9 col-sm-12 col-xs-12"><div class="col_in __padd-right">                <div class="without_vc">
+                                        <div class="post_details_wr">
+                        
+<div class="stm_post_info">
+	<div class="stm_post_details clearfix">
+		<ul class="clearfix">
+			<li class="post_date">
+				<i class="fa fa fa-clock-o"></i>
+				3 Tháng Tám, 2020			</li>
+			<li class="post_by">Đăng bởi:				<span>admin</span>
+			</li>
+			<li class="post_cat">Categories:				<span></span>
+			</li>
+		</ul>
+		<div class="comments_num">
+			<a href="index.htm#respond"><i class="fa fa-comment-o"></i>Không có phản hồi </a>
+		</div>
+	</div>
+	</div>                    </div>
+                    <div class="wpb_text_column">
+                        <div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="2048" height="800" src="../../wp-content/uploads/2019/09/loggo.gif" class="vc_single_image-img attachment-full" alt=""></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>DỊCH VỤ CHUYÊN NGHIỆP, MANG LẠI GIÁ TRỊ LỚN CHO KHÁCH HÀNG</p>
+<h4><span style="color: #ff0000;">LỢI ÍCH</span></h4>
+<ul>
+<li>Kiểm soát đầy đủ vòng đời của một tài khoản định danh trên hệ thống.</li>
+<li>Tự động hóa tiến trình phê duyệt và cấp quyền truy cập.</li>
+<li>Quản lý số lượng tài khoản lớn và giảm thời gian truy cập.</li>
+<li>Chống các hành vi giả mạo và sử dụng sai mục đích.</li>
+<li>Người dùng chỉ phải đăng nhập một lần để sử dụng toàn bộ dịch vụ của doanh nghiệp.</li>
+<li>Cắt giảm chi phí quản trị, nâng cao hiệu quả hoạt động doanh nghiệp.</li>
+</ul>
+<h4><span style="color: #ff0000;">ĐẶC ĐIỂM</span></h4>
+<ul>
+<li>Các kỹ sư BNH giàu kinh nghiệm, trình độ cao để thiết kế và triển khai dịch vụ.</li>
+<li>Đối tác là nhà cung cấp giải pháp hàng đầu trong lĩnh vực IAM.</li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Quản trị định danh giúp quản lý và kiểm soát truy cập hệ thống thông tin một cách hiệu quả. Điều đó vừa đảm bảo an toàn thông tin vừa nâng cao năng suất lao động của doanh nghiệp cũng như giảm thiểu chi phí vận hàng (operation cost).</p>
+<h4><span style="color: #ff0000;">GIẢI PHÁP QUẢN TRỊ ĐỊNH DANH TOÀN DIỆN</span></h4>
+
+		</div>
+	</div>
+
+	<div class="wpb_single_image wpb_content_element vc_align_left">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="613" height="343" src="../../wp-content/uploads/2020/08/img2.png" class="vc_single_image-img attachment-full" alt="" srcset="../../wp-content/uploads/2020/08/img2.png 613w, ../../wp-content/uploads/2020/08/img2-300x168.png 300w, ../../wp-content/uploads/2020/08/img2-350x195.png 350w" sizes="(max-width: 613px) 100vw, 613px"></div>
+		</figure>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4><span style="color: #ff0000;">NHỮNG ĐẶC ĐIỂM ĐỘC ĐÁO KHI SỬ DỤNG DỊCH VỤ CỦA BNH</span></h4>
+<p>BNH là partner chính hãng, đảm bảo cung cấp sản phẩm dịch vụ đúng theo tiêu chuẩn của hãng.</p>
+<p>Hệ thống được hỗ trợ kỹ thuật bởi những chuyên gia là những người được đào tạo chính quy trong và ngoài nước với trình độ chuyên môn cao, được công nhận của hãng, nhiệt huyết và giàu kinh nghiệm thực tế với các dự án lớn tại nước ngoài và Việt nam, đã đạt được các chứng chỉ quốc tế của hãng như sau:</p>
+<ul>
+<li>Oracle Weblogic Server 12c Certified Implementation Specialist</li>
+<li>Oracle Database 11g Administrator Certificated Professional</li>
+<li>Oracle Database 12c Administrator Certificated Professional</li>
+<li>Oracle Database 11g Security Certificated Specialist</li>
+<li>Oracle Expert, Oracle Database 12c: RAC and Grid Infractructure Administrator</li>
+<li>Oracle Expert, Oracle Database 12c Data Guard Administrator</li>
+<li>Oracle Expert, Oracle Database 12c Maximum Availablity</li>
+<li>Oracle Database 11g Perfomance Tuning Expert</li>
+<li>Oracle Certified Expert, Oracle Database 12c: Performance Management and Tuning</li>
+<li>Oracle Certificated Professional, MySQL 5.6 Database Administrator</li>
+<li>MariaDB Certified Database Administrator 10.3 Associate</li>
+</ul>
+<p>Công ty có trụ sở ở Hà Nội, cung cấp đội ngũ chuyên gia kỹ thuật onsite trong 1 giờ kề từ khi khách hàng yêu cầu để phối hợp xử lý sự cố hoặc hỗ trợ các yêu cầu kỹ thuật hệ thống.</p>
+
+		</div>
+	</div>
+</div></div></div></div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="post_bottom media">
+		</div>                                                                            </div>
+                </div></div>                <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">                                        <div class="sidebar-area default_widgets">
+                            <aside id="search-2" class="widget widget_search"><form method="get" class="search-form" action="http://bnh.vn/">
+	<input type="search" class="form-control" placeholder="Search..." value="" name="s">
+	<button type="submit"><i class="fa fa-search"></i></button>
+</form></aside><aside id="text-2" class="widget widget_text">			<div class="textwidget"><p><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBNHVietnam%2F&tabs=timeline&width=250&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></p>
+</div>
+		</aside>                        </div>
+                                    </div></div>                        </div>
+</article> <!-- #post-## -->
+</div>
+
+    </div> <!--.container-->
+    </div> <!--#main-->
+    </div> <!--.content_wrapper-->
+            
+        <footer id="footer" class="footer style_1">
+            
+                                                <div class="widgets_row">
+                        <div class="container">
+                            <div class="footer_widgets">
+                                <div class="row">
+                                                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                                                                                                                                                                        <div class="footer_logo">
+                                                            <a href="../../index.htm">
+                                                                <img src="../../wp-content/uploads/2019/09/logo-white.png" alt="BNH">
+                                                            </a>
+                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                <section id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="stm_contacts_widget  style_4">
+	<ul>
+		<li>
+			<div class="icon"><span class="stm-pin-11"></span></div>
+			<div class="text">Phòng 2615A, Tòa G3 Vinhomes Green Bay, Số 7 Đại Lộ Thăng Long, Phường Mễ Trì, Quận Nam Từ Liêm, Thành phố Hà Nội.</div>
+		</li>
+	</ul>
+</div></div></section>                                        </div>
+                                                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                                                        <section id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="stm_contacts_widget  style_4">
+	<ul>
+		<li>
+			<div class="icon"><span class="stm-clock6"></span></div>
+			<div class="text">
+			Thứ 2 – Thứ 7 : 8:00 – 18:00<br>
+			</div>
+		</li>
+	</ul>
+</div></div></section><section id="nav_menu-2" class="widget widget_nav_menu"><div class="menu-footer-menu-1-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-7389" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7389"><a href="#">GIỚI THIỆU</a>
+<ul class="sub-menu">
+	<li id="menu-item-7172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7172 stm_col_width_default stm_mega_cols_inside_default"><a href="../../gioi-thieu-chung/index.htm">GIỚI THIỆU CHUNG</a></li>
+	<li id="menu-item-7170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7170 stm_col_width_default stm_mega_cols_inside_default"><a href="../../khach-hang/index.htm">KHÁCH HÀNG</a></li>
+	<li id="menu-item-7169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7169 stm_col_width_default stm_mega_cols_inside_default"><a href="../../cau-chuyen-thanh-cong/index.htm">CÂU CHUYỆN THÀNH CÔNG</a></li>
+</ul>
+</li>
+</ul></div></section>                                        </div>
+                                                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                                                        <section id="custom_html-4" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="stm_contacts_widget  style_4">
+	<ul>
+		<li>
+			<div class="icon"><span class="stm-phone-11"></span></div>
+			<div class="text">
+			0989 890 326
+			</div>
+		</li>
+	</ul>
+</div></div></section><section id="nav_menu-3" class="widget widget_nav_menu"><div class="menu-footer-menu-2-container"><ul id="menu-footer-menu-2" class="menu"><li id="menu-item-7181" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-7181"><a href="#">GIẢI PHÁP</a>
+<ul class="sub-menu">
+	<li id="menu-item-7180" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7180 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-ho-tro-nang-cao-oracle-acs/index.htm">DỊCH VỤ HỖ TRỢ NÂNG CAO ORACLE ACS</a></li>
+	<li id="menu-item-7178" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7178 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-nang-cap-va-trien-khai-giai-phap-ha/index.htm">DỊCH VỤ NÂNG CẤP VÀ TRIỂN KHAI GIẢI PHÁP HA (HIGH AVAILABLE)</a></li>
+	<li id="menu-item-7179" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7179 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-oracle-premier-support/index.htm">DỊCH VỤ ORACLE PREMIER SUPPORT</a></li>
+	<li id="menu-item-7177" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7177 stm_col_width_default stm_mega_cols_inside_default"><a href="../cung-cap-license-subcription-support/index.htm">CUNG CẤP LICENSE &#038; SUBCRIPTION SUPPORT</a></li>
+	<li id="menu-item-7176" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7176 stm_col_width_default stm_mega_cols_inside_default"><a href="../dich-vu-danh-gia-va-kien-toan-bao-mat-database/index.htm">DỊCH VỤ ĐÁNH GIA VÀ KIỆN TOÀN BẢO MẬT DATABASE</a></li>
+	<li id="menu-item-7175" class="menu-item menu-item-type-post_type menu-item-object-stm_service current-menu-item menu-item-7175 stm_col_width_default stm_mega_cols_inside_default"><a href="index.htm" aria-current="page">GIẢI PHÁP QUẢN LÝ ĐỊNH DANH ORACLE IDENTITY MANAGEMENT</a></li>
+	<li id="menu-item-7174" class="menu-item menu-item-type-post_type menu-item-object-stm_service menu-item-7174 stm_col_width_default stm_mega_cols_inside_default"><a href="../gia-cong-phan-mem/index.htm">DỊCH VỤ GIA CÔNG PHẦN MỀM</a></li>
+</ul>
+</li>
+</ul></div></section>                                        </div>
+                                                                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                                                        <section id="custom_html-5" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><div class="stm_contacts_widget  style_4">
+	<ul>
+		<li>
+			<div class="icon"><span class="stm-envelope-11"></span></div>
+			<div class="text">
+			support@bnh.vn
+			</div>
+		</li>
+	</ul>
+</div></div></section><section id="nav_menu-4" class="widget widget_nav_menu"><div class="menu-footer-menu-3-container"><ul id="menu-footer-menu-3" class="menu"><li id="menu-item-7183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7183"><a href="#">THÔNG TIN</a>
+<ul class="sub-menu">
+	<li id="menu-item-7184" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7184 stm_col_width_default stm_mega_cols_inside_default"><a href="../../blog/index.htm">TIN TỨC</a></li>
+	<li id="menu-item-7185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7185 stm_col_width_default stm_mega_cols_inside_default"><a href="../../lien-he/index.htm">LIÊN HỆ</a></li>
+	<li id="menu-item-7186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7186 stm_col_width_default stm_mega_cols_inside_default"><a href="../../tuyen-dung/index.htm">TUYỂN DỤNG</a></li>
+</ul>
+</li>
+</ul></div></section>                                        </div>
+                                                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                            
+                            <div class="copyright_row">
+                    <div class="container">
+                        <div class="copyright_row_wr">
+                                                                                                <div class="socials">
+                                        <ul>
+                                                                                            <li>
+                                                    <a href="https://www.facebook.com/BNHVietnam/" target="_blank" class="social-facebook">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="" target="_blank" class="social-skype">
+                                                        <i class="fa fa-skype"></i>
+                                                    </a>
+                                                </li>
+                                                                                    </ul>
+                                    </div>
+                                                                                                                        <div class="copyright">
+                                                                            Copyright © 2020 Công ty Cổ phần tư vấn và dịch vụ công nghệ thông tin kinh doanh mạng lưới công nghệ cao                                                                    </div>
+                                                    </div>
+                    </div>
+                </div>
+                    </footer>
+            </div> <!--#wrapper-->
+        <div id="wpfront-scroll-top-container">
+            <img src="../../wp-content/plugins/wpfront-scroll-top/images/icons/109.png" alt="">        </div>
+                <script type="text/javascript">
+            function wpfront_scroll_top_init() {
+                if (typeof wpfront_scroll_top === "function" && typeof jQuery !== "undefined") {
+                    wpfront_scroll_top({"scroll_offset":100,"button_width":0,"button_height":0,"button_opacity":0.8000000000000000444089209850062616169452667236328125,"button_fade_duration":200,"scroll_duration":400,"location":1,"marginX":20,"marginY":20,"hide_iframe":false,"auto_hide":false,"auto_hide_after":2,"button_action":"top","button_action_element_selector":"","button_action_container_selector":"html, body","button_action_element_offset":0});
+                } else {
+                    setTimeout(wpfront_scroll_top_init, 100);
+                }
+            }
+            wpfront_scroll_top_init();
+        </script>
+        		<div class="zalo-container left" style="bottom:130px;">
+			<a id="zalo-btn" href="https://zalo.me/0989890326" target="_blank" rel="noopener noreferrer nofollow">
+								<div class="animated_zalo infinite zoomIn_zalo cmoz-alo-circle"></div>
+				<div class="animated_zalo infinite pulse_zalo cmoz-alo-circle-fill"></div>
+				<span><img src="../../wp-content/plugins/contact-me-on-zalo/assets/images/zalo-2.png" alt="Contact Me on Zalo"></span>
+							</a>
+		</div>
+			<div class="hotline-phone-ring-wrap">
+			<div class="hotline-phone-ring">
+				<div class="hotline-phone-ring-circle"></div>
+				<div class="hotline-phone-ring-circle-fill"></div>
+				<div class="hotline-phone-ring-img-circle">
+					<a href="tel:0989890326" class="pps-btn-img">
+												<img src="../../wp-content/plugins/hotline-phone-ring/assets/images/icon-1.png" alt="Số điện thoại" width="50">
+					</a>
+				</div>
+			</div>
+						<div class="hotline-bar">
+				<a href="tel:0989890326">
+					<span class="text-hotline">0989890326</span>
+				</a>
+			</div>
+					</div>
+	<script type="text/html" id="wpb-modifications"></script><script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/bnh.vn\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='../../wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.2'></script>
+<script type='text/javascript' src='../../wp-content/plugins/wpfront-scroll-top/js/wpfront-scroll-top.min.js?ver=2.0.7.08086'></script>
+<script type='text/javascript' src='../../wp-content/themes/consulting/assets/js/bootstrap.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='../../wp-content/themes/consulting/assets/js/select2.min.js?ver=4.0.2'></script>
+<script type='text/javascript' src='../../wp-content/themes/consulting/assets/js/custom.js?ver=4.0.2'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min.js?ver=5.4.12'></script>
+<script type='text/javascript' src='../../wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.2.0'></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+/*
+    Template: consulting
+    Theme Name: Consulting Child Theme
+    Theme URI: http://consulting.stylemixthemes.com/
+    Author: StylemixThemes
+    Author URI: http://stylemixthemes.com/
+    Description: Consulting - Business and Finance WordPress theme. Using Consluting you can easily create a modern website with real content. Easily edit the real content and compose the page layout with drag & drop page builder Consulting is the best ever finance, consulting, brokerage WordPress theme. It’s fully Responsive and Easy to Customize using intuitive Drag & Drop Visual Composer and Theme Options panel in WordPress Customizer.
+    Version: 4.0.2
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Tags: blue, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-layout, fluid-layout, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, sticky-post, translation-ready
+    Text Domain: consulting-child-theme
+*/
+#footer .footer_widgets .widget.widget_nav_menu ul li{ width:100%;font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+#footer .footer_widgets .widget.widget_nav_menu ul li a{color:#FFFFFF;}
+#footer .footer_widgets .widget.widget_nav_menu ul li .sub-menu li{width:100%;padding: 5px 20px 5px 20px;}
+#footer .footer_widgets .widget.widget_nav_menu ul li .sub-menu li:before{display:none;}
+#footer .copyright_row .copyright_row_wr .socials {
+    position: relative;
+    float: right;
+    width: 30%;
+    padding-top: 5px;
+}
+#footer .copyright_row .copyright_row_wr .copyright {
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgba(255,255,255,.5);
+    width: 70%;
+    padding: 10px 0 14px;
+}
+html body ul li.stm_megamenu > ul.sub-menu > li > a{font-size:14px!important;}
+html body ul li.stm_megamenu > ul.sub-menu > li{padding:0 20px!important;}
+.top_nav .main_menu_nav>ul>li ul li a, .top_nav .top_nav_wrapper>ul>li ul li a{padding: 13px 20px 11px;}
+.top-hopdong .testimonials_carousel.style_3 .testimonial_inner .image{
+	margin-right:0;
+	width:100%;
+}
+.top-hopdong .testimonials_carousel .testimonial .image img{
+	border-radius:0;
+	height: 100px;
+    width: auto;
+}
+.top-hopdong .testimonials_carousel.style_3 .testimonial_inner h6{
+	height: 60px;
+}
+.top-hopdong .testimonials_carousel .testimonial:after{
+	display: none;
+}
+.top-khachhangnoi .row-flex{display:flex; align-items:center;}
+.top-khachhangnoi .row-flex .talk-logo{width:30%; padding-right:20px;}
+.top-khachhangnoi .row-flex .kh-noi{width:70%;}
+
+@media only screen and (max-width: 991px){
+	.mobile_header .top_nav_mobile .main_menu_nav>li>a{
+		text-transform: uppercase;
+	}
+	.mobile_header .icon_texts{
+		display:none;
+	}
+	.mobile_header .header_info .header_socials{
+		display:none;
+	}
+	#footer .footer_widgets .widget{
+		margin: 0 0 20px;
+	}
+}
+.post_cat,.comments_num{
+	display: none;
+}
+.img-flag{
+	width: auto;
+    margin-bottom: 5px;
+    height: 16px;
+}
